@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev-server": "webpack-dev-server --open",
-    "build": "webpack --watch"
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
