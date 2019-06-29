@@ -2,4 +2,4 @@
 
 This is a Webpack configuration for a React app.
 
-Use `npm run build` to start webpack in watch mode and `npm run web-server` to start the development server.
+Use `npm run watch` to start webpack in watch mode and `npm run start` to start the development server.
