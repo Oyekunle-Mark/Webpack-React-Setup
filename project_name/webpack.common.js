@@ -25,6 +25,7 @@ module.exports = {
       skipWaiting: true,
     }),
     new WebpackPwaManifest({
+      filename: 'manifest.json',
       name: 'React App', // personalize this properties
       short_name: 'React App',
       description: 'My awesome React App',
