@@ -17,7 +17,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './index.html',
+      template: './public/index.html',
     }),
     new GenerateSW({
       swDest: 'sw.js',

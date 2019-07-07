@@ -8,7 +8,9 @@ module.exports = merge(common, {
   devtool: 'source-map',
   devServer: {
     publicPath: path.resolve(__dirname, '/bundle/'),
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: './public/index.html',
+    },
     compress: true,
     open: true,
     hot: true,
