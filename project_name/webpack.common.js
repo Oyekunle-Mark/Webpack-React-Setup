@@ -5,7 +5,7 @@ const { GenerateSW } = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'index.jsx'),
+  entry: path.resolve(__dirname, './src/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'bundle'),
     filename: 'bundle.js',
