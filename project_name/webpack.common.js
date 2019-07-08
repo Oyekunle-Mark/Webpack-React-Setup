@@ -1,8 +1,5 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.jsx'),
@@ -13,35 +10,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './public/index.html',
-    }),
-    new GenerateSW({
-      swDest: 'sw.js',
-      clientsClaim: true,
-      skipWaiting: true,
-    }),
-    new WebpackPwaManifest({
-      filename: 'manifest.json',
-      name: 'React App', // personalize this properties
-      short_name: 'React App',
-      description: 'My awesome React App',
-      background_color: '#ffffff',
-      theme_color: '#000000',
-      orientation: 'portrait',
-      start_url: '.',
-      display: 'standalone',
-      icons: [
-        {
-          src: path.resolve('./favicon.ico'), // path to app icon
-          sizes: [96, 128, 192, 256, 384, 512],
-        },
-      ],
-    }),
-  ],
+  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
       {
